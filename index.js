@@ -1,22 +1,19 @@
 function doGet() {
-  var subject = ``;
-  var body = ``;
-
+  //---
+  var subject = ``; // the subject / header / title
+  var body = ``; // the body
   const Users = '';  // emails to send to
-
-  const Subject = subject
+  // it can User(S): Users = "person@gmail.com,person@outlook.com,person@yahoo.com";
+  const Subject = subject;
   const Body = body;
-  //const Me = Logger.log(Session.getActiveUser());
-  const version = "Alpha"; 
-  Logger.log("Active User:" + Session.getActiveUser()) // refering to the const mye 
-  Logger.log("Gmail Sender Version: " + version)
-  
   var Send =   MailApp.sendEmail(Users, Subject, Body)
   var times = 1;
-  
+  //---
+
   for (let i = 1; i < 1; i++) {
     MailApp.sendEmail(Users, Subject, Body)
     Logger.log("sent email")
   }
+
   Logger.log("done.")
 }
